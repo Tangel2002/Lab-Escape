@@ -7,6 +7,8 @@ public class Fire : MonoBehaviour
     public Transform shootPos;
     public Vector2 screenPos;
     public Transform eye;
+    public AudioSource aud;
+    public AudioClip pew;
     void Start()
     {
         
@@ -31,6 +33,9 @@ public class Fire : MonoBehaviour
 
     void Shoot(Vector2 pos)
     {
+        aud.clip = pew;
+        aud.volume = 0.30f;
+        aud.Play();
         GameObject laserClone = (GameObject)Instantiate(laserPrefab, shootPos.position, shootPos.rotation);
         Laser las = laserClone.GetComponent<Laser>();
         //this.gameObject.GetComponent<AudioSource>().Play();

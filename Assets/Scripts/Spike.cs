@@ -7,6 +7,8 @@ public class Spike : MonoBehaviour
     GameObject TP;
     ContactFilter2D player;
     bool gibbed = false;
+    public AudioSource aud;
+    public AudioClip blap;
     float cooldown = 1;
 
     private void Start()
@@ -35,6 +37,9 @@ public class Spike : MonoBehaviour
 
     void Teleport()
     {
+        aud.clip = blap;
+        aud.volume = 0.30f;
+        aud.Play();
         GameObject play = GameObject.FindGameObjectWithTag("Player");
         play.transform.position = TP.transform.position;
     }
