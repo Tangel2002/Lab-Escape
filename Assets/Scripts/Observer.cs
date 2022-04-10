@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Observer : MonoBehaviour
 {
-    bool status = false;
-    bool animPlayed= false;
+    public bool status = false;
+    public bool animPlayed= false;
     public Sprite death;
    // public AnimationClip fade;
     private void Update()
@@ -14,8 +14,9 @@ public class Observer : MonoBehaviour
             gameObject.GetComponent<Animation>().Play("fade");
             status = false;
             animPlayed = true;
+            gameObject.tag = "Eye";
         }
-
+        
         if (animPlayed)
         {
             if (!gameObject.GetComponent<Animation>().isPlaying)
