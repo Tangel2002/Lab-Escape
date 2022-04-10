@@ -27,8 +27,8 @@ public class Spike : MonoBehaviour
 
     void Teleport()
     {
-        gibbed = false;
         GameObject play = GameObject.FindGameObjectWithTag("Player");
         play.transform.position = TP.transform.position;
+        gibbed = false;
     }
 }
