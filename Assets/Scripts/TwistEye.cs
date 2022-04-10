@@ -35,7 +35,7 @@ public class TwistEye : MonoBehaviour
         }
         if(countdown < 0)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("LevelOne2");
         }
     }
 }
