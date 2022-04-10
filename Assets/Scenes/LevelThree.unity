@@ -281,6 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fea60b735b6ae4648a42dc39a0a28467, type: 3}
+--- !u!4 &320498990 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6723799147585969142, guid: fea60b735b6ae4648a42dc39a0a28467, type: 3}
+  m_PrefabInstance: {fileID: 320498989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &337467042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Observer
       objectReference: {fileID: 0}
+    - target: {fileID: 7843105861053680559, guid: 67a2d619719c1494db9599a3a7c60fcf, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 320498990}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a2d619719c1494db9599a3a7c60fcf, type: 3}
 --- !u!1001 &429078783
@@ -1785,6 +1794,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329898962517885329, guid: 88c448a4180c8e341a05ba18e1e64bc6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4896128665219636082, guid: 88c448a4180c8e341a05ba18e1e64bc6, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.9423528
