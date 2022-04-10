@@ -1890,6 +1890,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 479340747608364035, guid: 2e76f79f91ed4284789476763be26a9e, type: 3}
+      propertyPath: next
+      value: LevelFive
+      objectReference: {fileID: 0}
     - target: {fileID: 3353473913653264540, guid: 2e76f79f91ed4284789476763be26a9e, type: 3}
       propertyPath: m_Name
       value: DoorGameJam
