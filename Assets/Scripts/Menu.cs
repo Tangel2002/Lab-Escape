@@ -1,38 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    bool paused = false;
-    public Canvas pauseCanv;
-
-
-    void Update()
+    public void LoadScene(string scene)
     {
-        if (Input.GetButtonDown("Cancel"))
+        if(scene == "Quit")
         {
-            pauseMenu();
-        }
-    }
-    public void pauseMenu()
-    {
-        if (!paused)
-        {
-            pauseCanv.gameObject.SetActive(true);
-            Time.timeScale = 0;
-
+            Application.Quit();
         }
         else
-        {
-            Time.timeScale = 1;
-            pauseCanv.gameObject.SetActive(false);
-        }
-
-        paused = !paused;
-    }
-
-
-    public void exit()
-    {
-        Application.Quit();
+            SceneManager.LoadScene(scene);
     }
 }
