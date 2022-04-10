@@ -348,7 +348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &78638970 stripped
 MonoBehaviour:
@@ -371,6 +371,10 @@ PrefabInstance:
     - target: {fileID: 7114081825137479908, guid: 5a90c7204f525aa4ba98944887ac43ca, type: 3}
       propertyPath: m_Name
       value: SpikesTrap (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114081825137479909, guid: 5a90c7204f525aa4ba98944887ac43ca, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7114081825137479910, guid: 5a90c7204f525aa4ba98944887ac43ca, type: 3}
       propertyPath: m_RootOrder
