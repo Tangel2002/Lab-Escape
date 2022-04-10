@@ -9,6 +9,7 @@ public class Spike : MonoBehaviour
     GameObject TP;
     ContactFilter2D player;
     bool gibbed = false;
+    float cooldown = 1;
 
     private void Start()
     {
@@ -17,6 +18,15 @@ public class Spike : MonoBehaviour
     }
     private void Update()
     {
+        if(gibbed == true)
+        {
+            cooldown -= 1 * Time.deltaTime;
+        }
+        if(cooldown <= 0)
+        {
+            gibbed = false;
+            cooldown = 1;
+        }
         if(col.IsTouching(player) && !gibbed)
         {
             gibbed = true;
@@ -29,6 +39,5 @@ public class Spike : MonoBehaviour
     {
         GameObject play = GameObject.FindGameObjectWithTag("Player");
         play.transform.position = TP.transform.position;
-        gibbed = false;
     }
 }
