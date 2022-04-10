@@ -4,11 +4,13 @@ public class Laser : MonoBehaviour
 {
     public Rigidbody2D body;
     Vector2 target;
+    Transform startPoint;
 
-    public void Attack(Vector2 enemy)
+    public void Attack(Vector2 enemy, Transform eye)
     {
         target = enemy;
-        body.velocity = target;
+        startPoint = eye;
+        body.AddForce(startPoint.right * 50f);
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class Laser : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        
         //float distance = 10f * Time.deltaTime;
 
         //transform.Translate(target.normalized * distance, Space.World);

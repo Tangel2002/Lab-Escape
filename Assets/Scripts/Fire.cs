@@ -23,7 +23,7 @@ public class Fire : MonoBehaviour
         Vector2 Direction = new Vector3(screenPos.x, screenPos.y, 0) - transform.position;
         float angle = Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg;
         Quaternion lookRot = Quaternion.AngleAxis(angle, Vector3.forward);
-        eye.rotation = Quaternion.Slerp(transform.rotation, lookRot, 20f * Time.deltaTime);
+        eye.rotation = Quaternion.Slerp(eye.rotation, lookRot, 20f * Time.deltaTime);
 
 
     }
@@ -36,7 +36,7 @@ public class Fire : MonoBehaviour
         //this.gameObject.GetComponent<AudioSource>().Play();
         if (las != null && screenPos != null)
         {
-            las.Attack(pos);
+            las.Attack(pos, eye);
         }
     }
 }
