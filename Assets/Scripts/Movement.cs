@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     {
         float inputX = Input.GetAxis("Horizontal");
         Vector3 move = new Vector3(speed * inputX, 0, 0);
-        /*
+
         if (move.x < 0)
         {
             flip.flipX = true;
@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
         {
             flip.flipX = false;
         }
-        */
+
         move *= Time.deltaTime;
         target.Translate(move);
 
