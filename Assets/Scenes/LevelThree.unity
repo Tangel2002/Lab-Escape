@@ -2071,8 +2071,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3499935304736419440, guid: d416ad1f2467d0e41a88a8362f531420, type: 3}
       propertyPath: m_Size.y
-      value: 0.65
+      value: 0.68
       objectReference: {fileID: 0}
+    - target: {fileID: 3499935304736419440, guid: d416ad1f2467d0e41a88a8362f531420, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 4e464e8aad7eee348b0e5b3d5d25f3cb, type: 2}
     - target: {fileID: 3499935304736419440, guid: d416ad1f2467d0e41a88a8362f531420, type: 3}
       propertyPath: m_Offset.x
       value: 0.05
@@ -2135,7 +2139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6975725562357022524, guid: d416ad1f2467d0e41a88a8362f531420, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d416ad1f2467d0e41a88a8362f531420, type: 3}
@@ -2418,6 +2422,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 479340747608364035, guid: 2e76f79f91ed4284789476763be26a9e, type: 3}
+      propertyPath: next
+      value: LevelFour
+      objectReference: {fileID: 0}
     - target: {fileID: 3353473913653264540, guid: 2e76f79f91ed4284789476763be26a9e, type: 3}
       propertyPath: m_Name
       value: DoorGameJam
