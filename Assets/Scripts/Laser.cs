@@ -22,7 +22,7 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Player")
+        if(collision.gameObject.tag != "Player" && collision.gameObject.tag != "TrapLaser")
         {
             Destroy(this.gameObject);
         }
@@ -30,9 +30,5 @@ public class Laser : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-    }
-    void Hit()
-    {
-
     }
 }
