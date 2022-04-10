@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3353473913653264542}
   - component: {fileID: 3353473913653264543}
   - component: {fileID: 3353473913653264537}
+  - component: {fileID: 479340747608364035}
   m_Layer: 0
   m_Name: DoorGameJam
   m_TagString: Untagged
@@ -93,7 +94,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e3443dedcdb2ace4d89f73f02d0c31d8, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.17301965, y: 0.12151933}
@@ -109,3 +110,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67795706, y: 2.8696198}
   m_EdgeRadius: 0
+--- !u!114 &479340747608364035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353473913653264540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ca9db12b901914dae0acc3695e955b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitbox: {fileID: 3353473913653264537}
+  next: 
