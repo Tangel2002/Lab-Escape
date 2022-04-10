@@ -19,6 +19,7 @@ public class Spike : MonoBehaviour
     {
         if(col.IsTouching(player) && !gibbed)
         {
+            gibbed = true;
             Instantiate(gib, col.transform);
             Teleport();
         }
@@ -26,7 +27,7 @@ public class Spike : MonoBehaviour
 
     void Teleport()
     {
-        gibbed = true;
+        gibbed = false;
         GameObject play = GameObject.FindGameObjectWithTag("Player");
         play.transform.position = TP.transform.position;
     }
