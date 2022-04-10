@@ -8,6 +8,7 @@ TagManager:
   - Spawn
   - Eye
   - TrapLaser
+  - Died
   layers:
   - Default
   - TransparentFX
