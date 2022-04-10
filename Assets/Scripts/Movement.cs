@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
     public SpriteRenderer flip;
     public Collider2D playerCollider;
     ContactFilter2D contactFilter;
+    public Rigidbody2D rb;
     private void Start()
     {
         target = this.transform;
@@ -15,6 +16,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         float inputX = Input.GetAxis("Horizontal");
+        float force = inputX * speed;
         Vector3 move = new Vector3(speed * inputX, 0, 0);
         if (move.x < 0)
         {
@@ -24,9 +26,17 @@ public class Movement : MonoBehaviour
         {
             flip.flipX = false;
         }
+        //move *= Time.deltaTime;
 
-        move *= Time.deltaTime;
-        target.Translate(move);
+        if (Input.GetKey("a"))
+        {
+            rb.velocity = new Vector2(force, rb.velocity.y);
+        }
+        if (Input.GetKey("d"))
+        {
+            rb.velocity = new Vector2(force, rb.velocity.y);
+        }
+        //target.Translate(move);
 
         if (Input.GetButtonDown("Jump") && playerCollider.IsTouching(contactFilter))
         {

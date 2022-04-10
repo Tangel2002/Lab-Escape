@@ -10,24 +10,25 @@ public class Laser : MonoBehaviour
     {
         target = enemy;
         startPoint = eye;
-        body.AddForce(startPoint.right * 50f);
+        body.AddForce(startPoint.right * 100f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
-        {
-            Destroy(gameObject);
-            return;
-        }
         
-        //float distance = 10f * Time.deltaTime;
-
-        //transform.Translate(target.normalized * distance, Space.World);
+        
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag != "Player")
+        {
+            Destroy(this.gameObject);
+        }
+    }
     void Hit()
     {
+
     }
 }
