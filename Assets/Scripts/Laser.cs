@@ -26,6 +26,10 @@ public class Laser : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if(collision.gameObject.tag == "Eye")
+        {
+            Destroy(collision.gameObject);
+        }
     }
     void Hit()
     {

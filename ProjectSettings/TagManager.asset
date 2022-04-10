@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Laser
   - Spawn
+  - Eye
   layers:
   - Default
   - TransparentFX
