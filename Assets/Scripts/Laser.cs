@@ -10,7 +10,7 @@ public class Laser : MonoBehaviour
     {
         target = enemy;
         startPoint = eye;
-        body.AddForce(startPoint.right * 100f);
+        body.AddForce(startPoint.right * 500f);
     }
 
     // Update is called once per frame
